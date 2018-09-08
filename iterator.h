@@ -5,7 +5,7 @@
 
 template <typename T>
 class Iterator {
-public:
+    protected:
         Node<T>* current;
 
     public:

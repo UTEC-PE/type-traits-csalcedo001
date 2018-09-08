@@ -58,13 +58,6 @@ class SList {
             return true;
         }
 
-        void print_first() {
-            for (Node <T> *it = head; it; it = it->next)
-                std::cout << it->data << std::endl;
-
-            // std::cout << head->data;
-        }
-
         bool remove(T item) {
             if (!head)
                 return false; // There is no item to be removed

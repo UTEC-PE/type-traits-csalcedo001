@@ -34,23 +34,7 @@ struct Float {
 
 int main(int argc, char const *argv[]) {
     testSimpleLinkedList();
-    // testDoubleLinkedList();
-
-    SList <Integer> list;
-
-    for (int i = 0; i < 5; i++)
-        list.insert(2 * i + 1);
-
-    for (int i = 0; i < 5; i++)
-        list.insert(2 * i);
-
-    for (int i = 0; i < 5; i++)
-        list.insert(2 * i + 1);
-
-    for (int i = 0; i < 5; i++)
-        list.remove(3 * i - 1);
-
-    // list.print_first();
+    testDoubleLinkedList();
 
     cin.get();
     return EXIT_SUCCESS;
@@ -84,22 +68,22 @@ void testSimpleLinkedList() {
     cout << endl << endl;
 }
 
-// void testDoubleLinkedList() {
-//     cout << "Double Linked List" << endl;
-//
-//     DList<Integer> integers;
-//     DList<Integer>::iterator ite;
-//
-//     for (int i = 0; i < 5; i++) {
-//         integers.push_front(2 * i + 1);
-//     }
-//
-//     ite = integers.begin();
-//     ++ite;
-//     cout << *ite << " ";
-//     ++ite;
-//     cout << *ite << " ";
-//     --ite;
-//     cout << *ite << " ";
-//     cout << endl << endl;
-// }
+void testDoubleLinkedList() {
+    cout << "Double Linked List" << endl;
+
+    DList<Integer> integers;
+    DList<Integer>::iterator ite;
+
+    for (int i = 0; i < 5; i++) {
+        integers.push_front(2 * i + 1);
+    }
+
+    ite = integers.begin();
+    ++ite;
+    cout << *ite << " ";
+    ++ite;
+    cout << *ite << " ";
+    --ite;
+    cout << *ite << " ";
+    cout << endl << endl;
+}
