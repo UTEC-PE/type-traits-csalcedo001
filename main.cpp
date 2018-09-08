@@ -47,12 +47,10 @@ int main(int argc, char const *argv[]) {
     for (int i = 0; i < 5; i++)
         list.insert(2 * i + 1);
 
-
-
     for (int i = 0; i < 5; i++)
         list.remove(3 * i - 1);
 
-    list.print_first();
+    // list.print_first();
 
     cin.get();
     return EXIT_SUCCESS;

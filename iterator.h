@@ -5,7 +5,7 @@
 
 template <typename T>
 class Iterator {
-    protected:
+public:
         Node<T>* current;
 
     public:
@@ -13,13 +13,12 @@ class Iterator {
         Iterator(Node<T>* current) : current(current) {};
 
         Iterator<T> operator=(Iterator<T> other) {
-            current->data = other.current->data;
-            current->next = other.current->next;
+            current = other.current;
 
             return *this;
         };
         bool operator!=(Iterator<T> other) {
-            return current->data == other.current->data;
+            return current != other.current;
         }
         T operator*() {
             return current->data;
