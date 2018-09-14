@@ -41,7 +41,7 @@ class SList {
 
         bool insert(T data) {
             if (!head) {
-                head = new Node <T> (data);
+                head = new Node <T> (data); // No deberías tener tantos casos, se puede reducir bastante este insert. Hay lógica repetida
                 return true;
             }
 
@@ -58,7 +58,7 @@ class SList {
             return true;
         }
 
-        bool remove(T item) {
+        bool remove(T item) { // Tienes lógica repetida
             if (!head)
                 return false; // There is no item to be removed
 
